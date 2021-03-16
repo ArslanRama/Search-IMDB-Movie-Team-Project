@@ -1,4 +1,5 @@
 # React Team Project
+***
 
 ### Colloborators:
 * Aslan
@@ -6,7 +7,9 @@
 * Michael
 * Stella
 
-**SEARCH IMDB MOVIES API**
+*SEARCH IMDB MOVIES API*
+
+***
 
 
 # Getting Started with Create React App
