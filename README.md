@@ -7,8 +7,20 @@
 * Jeremiah
 * Michael
 * Stella
-
 ***
+
+## AIM
+1. Connecting VSCODE with GITHUB
+2. Make a new GitHub repository
+3. Add other members
+4. Clone the repo 
+5. Admin creates a branch protection rule
+6. Each colloborator creates a new branch for each new feature
+7. Once your branch is ready to be merged to master
+8. Begin every day by pulling or fetching from the master to your local master
+   - Pulling will automatically try to merge the recent commits from master and throw errors if there are any conflicts
+   - Fetching will gather the most recent commits in a branch which you can then view and decide to merge or not
+   - Once you have all the most recent updates on your master you can then merge those changes into your branch:
 
 
 # Getting Started with Create React App
