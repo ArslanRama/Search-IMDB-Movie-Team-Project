@@ -1,13 +1,12 @@
-# React Team Project
+# React Team Project 
 ***
+ *SEARCH IMDB MOVIES API*
 
 ### Colloborators:
 * Aslan
 * Jeremiah
 * Michael
 * Stella
-
-*SEARCH IMDB MOVIES API*
 
 ***
 
