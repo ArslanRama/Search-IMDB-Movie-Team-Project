@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Redirect, NavLink } from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, Redirect, NavLink} from "react-router-dom";
 import About from './About';
 import Home from "./Home"
 import Movies from './Movies';
