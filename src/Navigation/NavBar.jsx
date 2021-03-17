@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect, NavLink } from "react-router-dom";
 import About from './About';
 import Home from "./Home"
@@ -16,7 +16,6 @@ function NavBar() {
                 </ul>
             </div>
             <Switch>
-
                 <Route exact path="/" component={Home}></Route>
                 <Route path="/about" component={About}></Route>
                 <Route path="/movies" component={Movies}></Route>
