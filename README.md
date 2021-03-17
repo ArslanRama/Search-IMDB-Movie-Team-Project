@@ -24,7 +24,9 @@
 
 ### Colloborators:
 * Aslan
+* Brujo
 * Jeremiah
+* Maha
 * Michael
 * Stella
 ***
