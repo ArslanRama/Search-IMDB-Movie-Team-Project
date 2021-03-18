@@ -12,7 +12,7 @@
     a - : Router method inside the navbar component (Route, link)
     b - : life cycle method: fetch the API, map method , use reducer state Hooks
  
- 3# - style:
+3# - style:
 
     a - : styling with scss or css 
     b - : Bootstrap 
