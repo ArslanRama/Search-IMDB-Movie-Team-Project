@@ -15,7 +15,7 @@
  3# - style:
 
     a - : styling with scss or css 
-    b - : Booststrap 
+    b - : Bootstrap 
 
 4# - files and folder names: 
 
