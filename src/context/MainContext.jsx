@@ -34,7 +34,7 @@ const MainContextProvider = ({children})=> {
 // const MOVIE_API_URL = `https://www.omdbapi.com/?s=man&apikey=${API_KEY}`;
 
 useEffect(()=>{
-    fetch("http://www.omdbapi.com/?i=tt3896198&apikey=d1ce076e")
+    fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=d1ce076e`)
     .then((res)=>res.json())
     .then(data => dispatch({type:"SEARCH_MOVIE_SUCCESS", payload: data}))
 },[]) 

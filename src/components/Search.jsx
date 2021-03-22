@@ -3,7 +3,7 @@ import MyContext from "../context/MainContext"
 
 const Search=()=> {
      const [dispatch] = useContext(MyContext)
-    const [movieName, setMovieName]=useState("");
+    const [movieName, setMovieName]=useState([]);
 
     // handle function
     const handleSearchInputChanges =(e)=>{

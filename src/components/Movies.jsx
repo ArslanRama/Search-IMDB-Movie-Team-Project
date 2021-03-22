@@ -5,7 +5,7 @@ const Movies = (props) => {
     return (
         <div>
             <header>
-            {props.text} 
+            {props.movies} 
             </header>
         </div>
     )
