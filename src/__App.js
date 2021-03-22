@@ -21,43 +21,6 @@ const initialState = {
   errorMessage: null,
 }
 
-//* REDUCER
-const reducer = (state, action) => {
-  switch (action.type) {
-    case 'SEARCH_MOVIE_REQUEST':
-      return {
-        ...state,
-        isLoading: true,
-        errorMessage: null
-      };
-    case 'SEARCH_MOVIE_SUCCESS':
-      return {
-        ...state,
-        isLoading: true,
-        movies: action.payload
-      };
-    case 'SEARCH_MOVIE_FAILURE':
-      return {
-        ...state,
-        isLoading: true,
-        errorMessage: action.error
-      };
-    default:
-      return state;
-  }
-}
-
-//** Add Favourites to favourite section */
-
-// const [favourites, setFavourites] = useState(initialState)
-// 
-// const addFavorite = (movie) => {
-// const newFavorite = [...favourites,movie]
-// setFavourites  (newFavorite)
-// 
-// }
-
-
 function App() {
 
   // dispatch

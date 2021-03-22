@@ -34,9 +34,13 @@ useEffect(()=>{
     fetch(MOVIE_API_URL)
     .then((res)=>res.json())
     .then(data => dispatch({type:"SEARCH_MOVIE_SUCCESS", payload: data}))
-},[MOVIE_API_URL])
+},[]) 
+
+const search = searchValue => {
+  dispatch({type:"SEARCH_MOVIE_REQUEST"})
+}
     return (
-        <MyContext.Provider value={{state, dispatch}}>
+        <MyContext.Provider value={[...state, dispatch]}>
             {children}
         </MyContext.Provider>
     )
