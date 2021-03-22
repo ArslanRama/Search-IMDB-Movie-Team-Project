@@ -49,13 +49,13 @@ const reducer = (state, action) => {
 
 //** Add Favourites to favourite section */
 
-const [favourites, setFavourites] = useState(initialState)
-
-const addFavorite = (movie) => {
-const newFavorite = [...favourites,movie]
-setFavourites  (newFavorite)
-
-}
+// const [favourites, setFavourites] = useState(initialState)
+// 
+// const addFavorite = (movie) => {
+// const newFavorite = [...favourites,movie]
+// setFavourites  (newFavorite)
+// 
+// }
 
 
 function App() {
@@ -76,13 +76,13 @@ function App() {
   }, []);
 
 
-  // search request
+  //* search request
   const searchMovie = searchValue => {
     dispatch({
       type: 'SEARCH_MOVIE_REQUEST'
     })
 
-    // fetching data
+    //* fetching data
     fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=${API_KEY}`)
       .then(response => response.json())
       .then(data => {
