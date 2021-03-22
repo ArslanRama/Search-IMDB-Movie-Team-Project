@@ -1,14 +1,15 @@
 import React from 'react'
 
-// here we need the placeholder image which is the poster in API
-// Create a variable with the poster like const ... = "poster link"
-// Create a function with paramater and pass it in return to show the info in browser
+//* here we need the placeholder image which is the poster in API
+//* Create a variable with the poster like const ... = "poster link"
+//* Create a function with paramater and pass it in return to show the info in browser
 
-function Movies() {
+const Movies =()=> {
+    const favouritesComponent = props.favouritesComponent
     return (
-        <div>
-            <h2></h2>
-        </div>
+        <>
+        {props.movies.map}
+        </>
     )
 }
 
