@@ -9,6 +9,13 @@ import NavBar from "./Navigation/NavBar";
 import MainContextProvider from './context/MainContext';
 
 function App() {
+    const initialState = []
+    const [state, dispatch] = useReducer(reducer, initialState)
+
+
+const search = searchValue => {
+  dispatch({type:"SEARCH_MOVIE_REQUEST"})
+}
     return (
         <MainContextProvider>
         <div>
