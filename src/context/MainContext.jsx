@@ -34,7 +34,7 @@ useEffect(()=>{
     fetch(MOVIE_API_URL)
     .then((res)=>res.json())
     .then(data => dispatch({type:"SEARCH_MOVIE_SUCCESS", payload: data}))
-},[])
+},[MOVIE_API_URL])
     return (
         <MyContext.Provider value={{state, dispatch}}>
             {children}
@@ -106,24 +106,6 @@ export default MainContextProvider
 
 
 
-
-
-
-
-
-
-
-, initialState)
-
-
-s=man&apikey=${API_KEY}`;
-
-
-
-UCCESS", payload: data}))
-
-
-tch}}>
 
 
 
