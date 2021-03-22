@@ -6,10 +6,10 @@ import Header from './Header';
 //* Create a variable with the poster like const ... = "poster link"
 //* Create a function with paramater and pass it in return to show the info in browser
 
-const Default_Placeholder_Image = 'https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg'
+// const Default_Placeholder_Image = 'https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg'
 
 const Movies =(movie)=> {
-    const poster = movie.Poster ? Default_Placeholder_Image: movie.Poster
+    // const poster = movie.Poster ? Default_Placeholder_Image: movie.Poster
 
    const [state, dispatch] = useContext(MyContext);
    console.log(state);
@@ -22,7 +22,7 @@ const Movies =(movie)=> {
        <img 
        width='200'
        alt={`The Movie titled: ${movie.Title}`}
-       src={poster}
+       src={movie.poster}
        />
         </div>
     )
