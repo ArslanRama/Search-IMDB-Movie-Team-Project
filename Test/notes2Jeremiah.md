@@ -7,7 +7,9 @@
 - dispatch is declared in the the react component.
 
 4.access information from the CONTEXT API in COMPONENTS using USECONTEXT..............
-
+ - what we pass into the provider we can extract in the components using USECONTEXT-- if we pass in an array format, then we can only extract in an array format. 
+ i.e. provider will have: value={[state,func]} comp will have: const [state, func]=useContext(MyContext)
+ 
 5.remove JSX-ELEMENTs using FILTER/slice.................
 
 -->
