@@ -1,26 +1,23 @@
 import React from 'react'
 //* Children Components */
-import Header from "./components/Header";
+// import Header from "./components/Movies";
+import Movies from "./components/Movies"
 import Search from "./components/Search";
-import Movies from "./components/Movies";
+import MovieList from "./components/MovieList"
 
 //* Navigaton Components */
 import NavBar from "./Navigation/NavBar";
 import MainContextProvider from './context/MainContext';
+// import MovieList from './components/MovieList';
 
 function App() {
-    const initialState = []
-    const [state, dispatch] = useReducer(reducer, initialState)
+   
 
-
-const search = searchValue => {
-  dispatch({type:"SEARCH_MOVIE_REQUEST"})
-}
     return (
         <MainContextProvider>
         <div>
             <NavBar />
-            <Header />
+            <MovieList />
             <Search/>
             <Movies />
         </div>

@@ -1,17 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
+import MyContext from "../context/MainContext"
 
-
-const Search=(props)=> {
-    const [searchValue, setSearchValue]=useState("");
+const Search=()=> {
+     const [dispatch] = useContext(MyContext)
+    const [movieName, setMovieName]=useState("");
 
     // handle function
     const handleSearchInputChanges =(e)=>{
-        setSearchValue(e.target.value);
+        setMovieName(e.target.value);
     }
     // search function
     const callSearchFunction = (e)=>{
         e.preventDefault();
-        props.search(searchValue)
+      dispatch({type:'SEARCH_MOVIE_SUCCESS', payload:movieName})
         // reset button
         
     }
@@ -21,7 +22,6 @@ const Search=(props)=> {
             <form className="search">
             <input 
             type="text"
-            value={searchValue}
             onChange={handleSearchInputChanges}
             placeholder="Search..."
             />
