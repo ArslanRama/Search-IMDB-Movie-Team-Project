@@ -131,22 +131,17 @@ const App = () => {
       </div>
               <div className="row">
         {' '}
+        {/* Adding Favourites */}
         <MovieList
           movies={movies}
           favouriteComponent={AddFav}
           handleFavoriteClick={addFavouriteMovie}
         />
       </div>
-      
+      {/* Removing Favourites */}
       <MovieList
           movies={favourites}
-          favouriteComponent={AddFav}
-          handleFavoriteClick={addFavouriteMovie}
-          // eslint-disable-next-line react/jsx-no-duplicate-props
-          movies={favourites}
-          // eslint-disable-next-line react/jsx-no-duplicate-props
           handleFavoriteClick={removeFavouriteMovie}
-          // eslint-disable-next-line react/jsx-no-duplicate-props
           favouriteComponent={RemoveFav}
         />
       </div>
