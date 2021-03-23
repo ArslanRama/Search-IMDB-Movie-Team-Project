@@ -2,6 +2,12 @@ import React, { useReducer, useEffect,useState } from 'react'
 import './styles/App.css'
 
 /* Components */
+import RemoveFav from './components/RemoveFav'
+import AddFav from './components/AddFav'
+import MovieListHeader from './components/MovieListHeader'
+import MovieList from './components/MovieList'
+
+/* Components */
 import Header from "./components/Header";
 import Movie from "./components/Movie";
 import Search from "./components/Search";
@@ -120,7 +126,29 @@ const App = () => {
           />
           ))
         )}
-        
+        <div className="row d-flex align-items-center mt-4 mb-4">
+        <MovieListHeader heading="Favourites" />
+      </div>
+              <div className="row">
+        {' '}
+        <MovieList
+          movies={movies}
+          favouriteComponent={AddFav}
+          handleFavoriteClick={addFavouriteMovie}
+        />
+      </div>
+      
+      <MovieList
+          movies={favourites}
+          favouriteComponent={AddFav}
+          handleFavoriteClick={addFavouriteMovie}
+          // eslint-disable-next-line react/jsx-no-duplicate-props
+          movies={favourites}
+          // eslint-disable-next-line react/jsx-no-duplicate-props
+          handleFavoriteClick={removeFavouriteMovie}
+          // eslint-disable-next-line react/jsx-no-duplicate-props
+          favouriteComponent={RemoveFav}
+        />
       </div>
       <FooterPage/>
     </div>
