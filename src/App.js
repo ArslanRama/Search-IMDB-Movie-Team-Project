@@ -116,7 +116,7 @@ const App = () => {
           <div className="errorMessage">{errorMessage}</div>
         ) : (
           movies.map((movie, index) => (
-            <Movies key={`${index}-${movie.Title}`} movie={movie}
+            <Movie key={`${index}-${movie.Title}`} movie={movie}
           />
           ))
         )}
