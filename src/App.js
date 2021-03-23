@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Movie from "./components/Movie";
 import Search from "./components/Search";
 import Navbar from "./Navigation/Navbar";
+import FooterPage from "./Footer/footer";
 
 
 /* API */
@@ -103,7 +104,9 @@ const App = () => {
             <Movie key={`${index}-${movie.Title}`} movie={movie} />
           ))
         )}
+        
       </div>
+      <FooterPage/>
     </div>
   );
 };
