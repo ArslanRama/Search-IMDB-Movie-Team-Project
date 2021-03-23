@@ -1,26 +1,27 @@
 import React from 'react'
 //* Children Components */
 // import Header from "./components/Movies";
-import Movies from "./components/Movie"
-// import Search from "./context/Search";
-import MovieList from "./context/MovieList"
+import Movies from "./components/Movies"
+import Search from "./components/Search";
+import MovieList from "./components/MovieList"
 
 //* Navigaton Components */
 import NavBar from "./Navigation/NavBar";
-import MyProvider from './context/MovieContext';
+import MainContextProvider from './context/MainContext';
 // import MovieList from './components/MovieList';
 
 function App() {
    
 
     return (
-        <MyProvider>
+        <MainContextProvider>
         <div>
             <NavBar />
             <MovieList />
+            <Search/>
             <Movies />
         </div>
-        </MyProvider>
+        </MainContextProvider>
     )
 }
 
