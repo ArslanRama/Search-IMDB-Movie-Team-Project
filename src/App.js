@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useReducer, useEffect,useState } from 'react'
 import './App.css'
 
@@ -10,6 +11,17 @@ import AddFavourites from './components/AddFav'
 import RemoveFav from './components/RemoveFav'
 // import AddFav from './components/AddFav'
 import MovieListHeader from './components/MovieListHeader'
+=======
+import React, { useReducer, useEffect } from "react";
+import "./styles/App.css";
+
+/* Components */
+import Header from "./components/Header";
+import Movie from "./components/Movie";
+import Search from "./components/Search";
+import Navbar from "./Navigation/Navbar";
+
+>>>>>>> 739bee3b71b618b46c9a690efe8ab55201a456a2
 
 /* API */
 const API_KEY = 'd1ce076e'
@@ -106,6 +118,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="Nav">
+      <Navbar/>
         <Header text="Search IMDB MOVIES with HOOK" />
         <Search search={search} />
       </div>
