@@ -5,6 +5,8 @@ import "./App.css";
 import Header from "./components/Header";
 import Movie from "./components/Movie";
 import Search from "./components/Search";
+import Navbar from "./Navigation/Navbar";
+
 
 /* API */
 const API_KEY = "d1ce076e";
@@ -86,6 +88,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="Nav">
+      <Navbar/>
         <Header text="Search IMDB MOVIES with HOOK" />
         <Search search={search} />
       </div>
