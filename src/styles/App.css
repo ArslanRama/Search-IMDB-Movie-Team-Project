@@ -43,6 +43,10 @@
 .add-movies {
   text-align: center;
 }
+.add{
+  color: black;
+  
+}
 
 .add-movies button {
   font-size: 16px;
