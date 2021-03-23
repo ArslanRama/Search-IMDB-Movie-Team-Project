@@ -1,27 +1,18 @@
-<<<<<<< HEAD
+// <<<<<<< HEAD
 import React, { useReducer, useEffect,useState } from 'react'
-import './App.css'
+import './styles/App.css'
 
 /* Components */
 import Header from './components/Header'
-import Movies from './components/Movie'
+import Movie from './components/Movie'
 import MoviesList from './components/MovieList'
 import Search from './components/Search'
 import AddFavourites from './components/AddFav'
 import RemoveFav from './components/RemoveFav'
 // import AddFav from './components/AddFav'
 import MovieListHeader from './components/MovieListHeader'
-=======
-import React, { useReducer, useEffect } from "react";
-import "./styles/App.css";
-
-/* Components */
-import Header from "./components/Header";
-import Movie from "./components/Movie";
-import Search from "./components/Search";
-import Navbar from "./Navigation/Navbar";
-
->>>>>>> 739bee3b71b618b46c9a690efe8ab55201a456a2
+import Navbar from './Navigation/Navbar'
+// =======
 
 /* API */
 const API_KEY = 'd1ce076e'
@@ -120,8 +111,10 @@ const App = () => {
       <div className="Nav">
       <Navbar/>
         <Header text="Search IMDB MOVIES with HOOK" />
+      </div>  
+      <div className="main_container">
         <Search search={search} />
-      </div>
+    
       <p className="App-intro"></p>
       <div className="movies">
         {loading && !errorMessage ? (
@@ -130,7 +123,7 @@ const App = () => {
           <div className="errorMessage">{errorMessage}</div>
         ) : (
           movies.map((movie, index) => (
-            <Movies key={`${index}-${movie.Title}`} movie={movie}
+            <Movie key={`${index}-${movie.Title}`} movie={movie}
           />
           ))
         )}
@@ -157,7 +150,7 @@ const App = () => {
           // eslint-disable-next-line react/jsx-no-duplicate-props
           favouriteComponent={RemoveFav}
         />
-      
+      </div>
       </div>
     </div>
   )
