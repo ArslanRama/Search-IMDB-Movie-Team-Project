@@ -1,5 +1,5 @@
 import React, { useReducer, useEffect } from "react";
-import "./App.css";
+import "./styles/App.css";
 
 /* Components */
 import Header from "./components/Header";
