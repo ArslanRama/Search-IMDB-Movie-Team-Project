@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/Cursor.css'
 const AddFav = () => {
   return (
-    <div>
+    <div className="fav-list">
       <span className="mr-2 fav">Add to Favourites</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"

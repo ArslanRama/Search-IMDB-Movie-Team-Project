@@ -13,16 +13,19 @@ const MoviesList = (movies) => {
           alt="movies"
           />
           <div onClick={() => movies.handleFavoriteClick(movie)}className="overlay d-flex align-items-center justify-content-center ">
-          <FavouriteComponent />
+          
             <ul className="card_info">
+              <li><FavouriteComponent /></li>
               <li>{movie.Title}</li>
               <li>{movie.Year}</li>
               <li><StarRating rating={5}/></li>
             </ul> 
+            
              
             
             
           </div>
+          
         </div> 
       ))}
     </>

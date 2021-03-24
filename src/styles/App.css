@@ -33,15 +33,15 @@
 * {
   box-sizing: border-box;
 }
+.main_container{
+  background-color: #3635351f;
+  /* margin-top:-10px; */
+}
 
 .movies {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-}
-
-.card_info{
-  list-style: ;
 }
 
 .App-header h2 {
@@ -60,10 +60,71 @@
 
 .movie {
   padding: 5px 25px 10px 25px;
+  margin: 5px;
   max-width: 25%;
+  border-radius: 6px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 20px 20px 60px #bebebe,
+  -20px -20px 60px #ffffff; 
   
 }
+ .movie:hover{
+  transform: scale(1.05);
+  transition: 1s;
+  background-color: #000000;
+  box-shadow:  26px 26px 52px #606060,
+             -26px -26px 52px #ffffff;
+  } 
 
+.movie img {
+  border-radius: 5px;
+  background-color: black;
+
+  }
+   .movie img:hover{
+  opacity: 0.88;
+    
+  }
+  .favourite_list{
+    padding: 5px 25px 10px 25px;
+  margin: 5px;
+  max-width: 10%;
+  /* max-height: 10%; */
+  border-radius: 6px;
+  background: linear-gradient(145deg, #ffb803b2, #cacaca);
+  box-shadow: 20px 20px 60px #bebebe,
+  -20px -20px 60px #ffffff; 
+  
+  }
+ 
+
+  .favourite_list:hover{
+    
+    max-width: 40%;
+    max-height: 10%;
+    transform: scale(1.05);
+    transition: 1s;
+    background-color: #000000;
+    box-shadow:  26px 26px 52px #606060,
+               -26px -26px 52px #ffffff;
+    } 
+
+  .favourite_list img{
+    border-radius: 5px;
+    background-color: black;
+    /* max-height:40%; */
+    max-width: 300%;
+  }
+
+  .favourite_list img:hover{
+    transition: 1s;
+  }
+  .card_info{
+    list-style: none;
+    text-align: center;
+    
+  }
+ 
 .errorMessage {
   margin: auto;
   font-weight: bold;
@@ -71,11 +132,13 @@
 }
 
 .search {
+  position: static;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+ 
 }
 
 input[type="submit"] {
@@ -85,6 +148,7 @@ input[type="submit"] {
   border: 1px solid black;
   width: 80px;
   margin-left: 5px;
+  margin-top: 10px;
   cursor: pointer;
 }
 
@@ -96,6 +160,7 @@ input[type="submit"]:hover {
 .search > input[type="text"] {
   width: 40%;
   min-width: 170px;
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 694px) and (max-width: 915px) {
@@ -126,6 +191,7 @@ input[type="submit"]:hover {
   background-color: #ffb703;
   transition-duration: 4s;
   transition-delay: 2s;
+  
 }
 
 .link {

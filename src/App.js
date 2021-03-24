@@ -13,6 +13,7 @@ import Movie from './components/Movie'
 import Search from './components/Search'
 import Navbar from './Navigation/Navbar'
 import FooterPage from './Footer/footer'
+import FavouriteList from './components/FavouriteList'
 
 /* API */
 const API_KEY = 'd1ce076e'
@@ -120,7 +121,7 @@ useEffect(() => {
       <Navbar/>
         <Header text="Search IMDB MOVIES with HOOK" />
     
-      <div className="main_container">
+      <main className="main_container">
         <Search search={search} />
     
       <p className="App-intro"></p>
@@ -149,13 +150,14 @@ useEffect(() => {
         <MovieListHeader heading="Favourites" />
       </div>
       {/* Removing Favourites */}
-      <MovieList
+     
+      <FavouriteList
           movies={favourites}
           handleFavoriteClick={removeFavouriteMovie}
           favouriteComponent={RemoveFav}
         />
       </div>
-      </div>
+      </main>
       <FooterPage/>
     </div>
   )
