@@ -1,13 +1,13 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-
+import '../styles/footer.css'
 
 const Footer = () => {
   return (
     <MDBFooter color="stylish-color-dark" className="page-footer font-small pt-4 mt-4">
       <MDBContainer fluid className="text-center text-md-left">
-        <MDBRow>
-          <MDBCol md="6">
+        <MDBRow className="justify-content-center">
+          <MDBCol md="3 mb-4 d-flex flex-column align-items-center">
             <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
             IMDB Movie Search Engine
             </h5>
@@ -16,7 +16,7 @@ const Footer = () => {
             </p>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
-          <MDBCol md="2">
+          <MDBCol md="4 d-flex flex-column align-items-center mb-4">
             <h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
               Links
             </h5>
@@ -36,11 +36,11 @@ const Footer = () => {
             </ul>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none" />
-          <MDBCol md="4" lg="3" xl="3" className="mb-4">
+          <MDBCol md="3 d-flex flex-column align-items-center" lg="3" xl="3" className="mb-4">
             <h6 className="text-uppercase mb-4 mt-3 font-weight-bold">
               <strong>Contact</strong>
             </h6>
-           
+           <div>
             <p>
               <i className="fa fa-home mr-3" /> Leipzig, Saxony 04177, DE
             </p>
@@ -53,6 +53,7 @@ const Footer = () => {
             <p>
               <i className="fa fa-print mr-3" /> + 49 234 567 89
             </p>
+            </div>
           </MDBCol>
         </MDBRow>
       </MDBContainer>
@@ -62,27 +63,31 @@ const Footer = () => {
       <div className="text-center">
      {/*  <h3>Contributors</h3> */}
         <ul className="list-unstyled list-inline">
+        <li className="list-inline-item">
+            <span className="btn-floating btn-sm btn-fb mx-1 font-weight-bold"> Collaborators :
+            </span>
+          </li>
           <li className="list-inline-item">
-            <a className="btn-floating btn-sm btn-fb mx-1" href="https://github.com/Jeremiah1582"> Jeremiah <img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/>
+            <a className="btn-floating btn-sm btn-fb mx-1 font-italic" href="https://github.com/Jeremiah1582"> Jeremiah 
             </a>
           </li>
           <li className="list-inline-item">
-            <a className="btn-floating btn-sm btn-tw mx-1"href="https://github.com/ste66"> Stella <img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/>
+            <a className="btn-floating btn-sm btn-tw mx-1 font-italic"href="https://github.com/ste66"> Stella 
 
             </a>
           </li>
           <li className="list-inline-item">
-            <a className="btn-floating btn-sm btn-gplus mx-1"href="https://github.com/BrujoH"> Brujo <img alt="SASS" src="https://img.shields.io/badge/SASS%20-hotpink.svg?&style=for-the-badge&logo=SASS&logoColor=white"/>
+            <a className="btn-floating btn-sm btn-gplus mx-1 font-italic"href="https://github.com/BrujoH"> Brujo 
 
             </a>
           </li>
           <li className="list-inline-item">
-            <a className="btn-floating btn-sm btn-li mx-1"href="https://github.com/MetalRocks71"> Michael  <img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+            <a className="btn-floating btn-sm btn-li mx-1 font-italic"href="https://github.com/MetalRocks71"> Michael  
 
             </a>
           </li>
           <li className="list-inline-item">
-            <a className="btn-floating btn-sm btn-dribbble mx-1"href="https://github.com/ArslanRama"> Aslan <img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+            <a className="btn-floating btn-sm btn-dribbble mx-1 font-italic"href="https://github.com/ArslanRama"> Aslan 
 
             </a>
           </li>
@@ -90,7 +95,14 @@ const Footer = () => {
       </div>
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright: <a href="https://github.com/ArslanRama/Search-IMDB-Movie-Team-Project"> Team Project </a>
+          &copy; {new Date().getFullYear()} Copyright: <a className="mr-3" href="https://github.com/ArslanRama/Search-IMDB-Movie-Team-Project"> Team Project </a>
+          
+          <img className="mr-5" alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+          
+          <a className="mx-2 logo" href="https://twitter.com/?lang=de"><i className="fab fa-twitter"/></a>
+          <a className="mx-2 logo" href="https://de-de.facebook.com"><i className="fab fa-facebook"/></a>
+          <a className="mx-2 logo" href="https://www.instagram.com"><i className="fab fa-instagram"/></a>
+          <a className="mx-2 logo" href="https://github.com/"><i className="fab fa-github"/></a>
         </MDBContainer>
       </div>
     </MDBFooter>
