@@ -4,7 +4,7 @@
 function MyAccount() {
  return (
   <div>
-       <h3>MyAccount</h3>
+
   </div>
  )
 }

@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-function Home() {
+function TopRated() {
  return (
   <div>
 
@@ -10,4 +10,4 @@ function Home() {
  )
 }
 
-export default Home
+export default TopRated;

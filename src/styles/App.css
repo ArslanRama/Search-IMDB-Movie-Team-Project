@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #1a4fb9;
+  background-color: black;
   height: 70px;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,10 @@
   color: white;
   padding: 20px;
   cursor: pointer;
+}
+
+.header {
+  padding-top: 2px;
 }
 
 .spinner {
@@ -114,7 +118,7 @@ input[type="submit"]:hover {
   justify-content: center;
   list-style-type: none;
   height: 80px;
-  background-color: #ff8c00;
+  background-color: #ffb703;
   transition-duration: 4s;
   transition-delay: 2s;
 }
