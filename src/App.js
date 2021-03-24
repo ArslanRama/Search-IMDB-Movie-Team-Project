@@ -118,19 +118,11 @@ useEffect(() => {
     <div className="App">
     
       <Navbar/>
-<<<<<<< HEAD
         <Header text="Search IMDB MOVIES with HOOK" />
       </div>  
       <div className="main_container">
         <Search search={search} />
     
-=======
-      <div className="header">
-        <Header text=" IMDB MOVIE APP" />
-        <Search search={search} />
-   
-      </div>
->>>>>>> main
       <p className="App-intro"></p>
       <div className="movies">
         {loading && !errorMessage ? (
