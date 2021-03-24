@@ -39,6 +39,10 @@
   flex-direction: row;
 }
 
+.card_info{
+  list-style: ;
+}
+
 .App-header h2 {
   margin: 0;
 }
