@@ -12,7 +12,6 @@ const MoviesList = (movies) => {
             src={movie.Poster}
             alt="movies"
           />
-          <p>{movie.Title}</p>
           <p>{movie.Rating}</p>
           <p>{movie.Year}</p>
           <StarRating rating={5}/>
