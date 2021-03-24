@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React, { useReducer, useEffect,useState } from 'react'
-import './styles/App.css'
-
-/* Components */
-import Header from './components/Header'
-import Movie from './components/Movie'
-import MoviesList from './components/MovieList'
-import Search from './components/Search'
-import AddFavourites from './components/AddFav'
-import RemoveFav from './components/RemoveFav'
-import AddFav from './components/AddFav'
-import MovieListHeader from './components/MovieListHeader'
-import Navbar from './Navigation/Navbar'
-// =======
-=======
 import React, { useReducer, useEffect, useState } from 'react'
 import './styles/App.css'
 
@@ -29,7 +13,6 @@ import Movie from './components/Movie'
 import Search from './components/Search'
 import Navbar from './Navigation/Navbar'
 import FooterPage from './Footer/footer'
->>>>>>> main
 
 /* API */
 const API_KEY = 'd1ce076e'
