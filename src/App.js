@@ -8,12 +8,11 @@ import MovieListHeader from './components/MovieListHeader'
 import MovieList from './components/MovieList'
 
 /* Components */
-import Header from "./components/Header";
-import Movie from "./components/Movie";
-import Search from "./components/Search";
-import Navbar from "./Navigation/Navbar";
-import FooterPage from "./Footer/footer";
-
+import Header from './components/Header'
+import Movie from './components/Movie'
+import Search from './components/Search'
+import Navbar from './Navigation/Navbar'
+import FooterPage from './Footer/footer'
 
 /* API */
 const API_KEY = 'd1ce076e'
@@ -39,7 +38,6 @@ const reducer = (state, action) => {
         ...state,
         loading: false,
         movies: action.payload,
-
       }
     case 'SEARCH_MOVIES_FAILURE':
       return {
@@ -55,7 +53,7 @@ const reducer = (state, action) => {
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
   const [favourites, setFavourites] = useState([])
-  console.log(favourites);
+  console.log(favourites)
 
   useEffect(() => {
     fetch(MOVIE_API_URL)
@@ -68,11 +66,20 @@ const App = () => {
       })
   }, [])
 
-  const addFavouriteMovie = (movie) => {
-    const NewFavouriteList = [...favourites, movie]
-    setFavourites(NewFavouriteList)
+  const saveToLocalStorage = (item) => {
+    localStorage.setItem('myLocalStorage', JSON.stringify(item))
   }
 
+  useEffect(() => {
+    const movieFavourites = JSON.parse(localStorage.getItem('myLocalStorage'))
+    setFavourites(movieFavourites)
+  }, [])
+
+  const addFavouriteMovie = (movie) => {
+    const newFavouriteList = [...favourites, movie]
+    setFavourites(newFavouriteList)
+    saveToLocalStorage(newFavouriteList)
+  }
 
   const removeFavouriteMovie = (movie) => {
     const newFavouriteList = favourites.filter(
@@ -80,6 +87,7 @@ const App = () => {
     )
 
     setFavourites(newFavouriteList)
+    saveToLocalStorage(newFavouriteList)
   }
   const search = (searchValue) => {
     dispatch({
@@ -104,7 +112,6 @@ const App = () => {
       })
   }
 
-
   const { movies, errorMessage, loading } = state
 
   return (
@@ -122,12 +129,10 @@ const App = () => {
           <div className="errorMessage">{errorMessage}</div>
         ) : (
           movies.map((movie, index) => (
-            <Movie key={`${index}-${movie.Title}`} movie={movie}
-            />
+            <Movie key={`${index}-${movie.Title}`} movie={movie} />
           ))
         )}
-        <div className="row d-flex align-items-center mt-4 mb-4">
-        </div>
+        <div className="row d-flex align-items-center mt-4 mb-4"></div>
         <div className="row">
           {' '}
           {/* Adding Favourites */}
