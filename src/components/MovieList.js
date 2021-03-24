@@ -1,4 +1,5 @@
 import React from 'react'
+import StarRating from "./starRating"
 
 const MoviesList = (movies) => {
   const FavouriteComponent = movies.favouriteComponent
@@ -13,6 +14,14 @@ const MoviesList = (movies) => {
           />
           <div onClick={() => movies.handleFavoriteClick(movie)}className="overlay d-flex align-items-center justify-content-center ">
           <FavouriteComponent />
+            <ul className="">
+              <li>{movie.Title}</li>
+              <li><StarRating rating={5}/></li>
+              <li>{movie.Year}</li>
+            </ul> 
+             
+            
+            
           </div>
         </div> 
       ))}
