@@ -17,13 +17,8 @@ function Navbar() {
                  <div>
                      <ul className="navbar"  >
                                  <li ><Link className= "link ml-4"  to ="/"><i class="fa fa-home"></i> Home</Link></li> 
-<<<<<<< HEAD
                                  <li><NavLink className= "link"  to="/about"><i class="fa fa-user"></i> About</NavLink></li> 
                                  <li><NavLink className= "link" to ="/contacts"> <i class="fa fa-phone"></i> Contacts</NavLink></li> 
-=======
-                                 <li><NavLink className= "link"  to="/movies"><i class="fa fa-film"></i> Movies</NavLink></li> 
-                                 <li><NavLink className= "link" to ="/topRated"> <i class="fa fa-star"></i>TopRated</NavLink></li> 
->>>>>>> main
                                  <li><NavLink className= "link"  to ="/members">  <i class="fa fa-users"></i> Members</NavLink></li> 
                                  <li><NavLink className= "link mr-4"  to ="/myAccount"><i class="fa fa-clone"></i> MyAccount</NavLink></li> 
                                    <Redirect to="/"></Redirect>
