@@ -147,7 +147,7 @@ const App = () => {
 
         {/* Adding Favourites */}
         <div className="row d-flex align-items-center mt-4 mb-4">
-          <MovieListHeader heading="My Favourites Movies" />
+          <MovieListHeader heading="My Saved Movies" />
         </div>
         {/* Removing Favourites */}
         <MovieList
