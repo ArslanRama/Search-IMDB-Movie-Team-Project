@@ -135,9 +135,7 @@ useEffect(() => {
           />
           ))
         )}
-        <div className="row d-flex align-items-center mt-4 mb-4">
-        <MovieListHeader heading="Favourites" />
-      </div>
+      
               <div className="row">
         {' '}
         {/* Adding Favourites */}
@@ -146,6 +144,9 @@ useEffect(() => {
           favouriteComponent={AddFav}
           handleFavoriteClick={addFavouriteMovie}
         />
+      </div>  
+      <div className="row d-flex align-items-center mt-4 mb-4">
+        <MovieListHeader heading="Favourites" />
       </div>
       {/* Removing Favourites */}
       <MovieList
