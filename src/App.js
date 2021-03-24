@@ -119,7 +119,7 @@ useEffect(() => {
     
       <Navbar/>
         <Header text="Search IMDB MOVIES with HOOK" />
-      </div>  
+    
       <div className="main_container">
         <Search search={search} />
     
@@ -131,7 +131,6 @@ useEffect(() => {
           <div className="errorMessage">{errorMessage}</div>
         ) : (
           movies.map((movie, index) => (
-<<<<<<< HEAD
             <Movie key={`${index}-${movie.Title}`} movie={movie}
           />
           ))
@@ -150,39 +149,13 @@ useEffect(() => {
       </div>
       {/* Removing Favourites */}
       <MovieList
-=======
-            <Movie key={`${index}-${movie.Title}`} movie={movie} />
-          ))
-        )}
-        <div className="row d-flex align-items-center mt-4 mb-4"></div>
-        <div className="row">
-          {' '}
-          {/* Adding Favourites */}
-          <MovieList
-            movies={movies}
-            favouriteComponent={AddFav}
-            handleFavoriteClick={addFavouriteMovie}
-          />
-        </div>
-
-        {/* Adding Favourites */}
-        <div className="row d-flex align-items-center mt-4 mb-4">
-          <MovieListHeader heading="My Saved Movies" />
-        </div>
-        {/* Removing Favourites */}
-        <MovieList
->>>>>>> main
           movies={favourites}
           handleFavoriteClick={removeFavouriteMovie}
           favouriteComponent={RemoveFav}
         />
       </div>
-<<<<<<< HEAD
       </div>
       <FooterPage/>
-=======
-      <FooterPage />
->>>>>>> main
     </div>
   )
 }

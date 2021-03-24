@@ -9,7 +9,7 @@ const  Movie = ({movie}) => {
     <div className="movie">
       
       
-      <div>
+    
       {/* <img
           width="200"
           alt={`The movie titled: ${movie.Title}`}
