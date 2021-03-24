@@ -118,7 +118,7 @@ useEffect(() => {
     <div className="App">
     
       <Navbar/>
-        <Header text="Search IMDB MOVIES with HOOK" />
+        <Header text="IMDB MOVIE APP" />
     
       <div className="main_container">
         <Search search={search} />
