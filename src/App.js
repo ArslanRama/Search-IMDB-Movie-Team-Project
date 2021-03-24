@@ -111,7 +111,7 @@ const App = () => {
     <div className="App">
       <div className="Nav">
         <Navbar />
-        <Header text="Search IMDB MOVIES with HOOK" />
+        <Header text="IMDB MOVIE APP" />
         <Search search={search} />
       </div>
       <p className="App-intro"></p>
@@ -127,7 +127,6 @@ const App = () => {
           ))
         )}
         <div className="row d-flex align-items-center mt-4 mb-4">
-          <MovieListHeader heading="Favourites" />
         </div>
         <div className="row">
           {' '}
