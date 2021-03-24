@@ -109,10 +109,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="Nav">
+    
       <Navbar/>
-        <Header text="Search IMDB MOVIES with HOOK" />
+      <div className="header">
+        <Header text=" IMDB MOVIE APP" />
         <Search search={search} />
+   
       </div>
       <p className="App-intro"></p>
       <div className="movies">
