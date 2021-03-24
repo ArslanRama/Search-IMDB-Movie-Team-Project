@@ -116,16 +116,10 @@ const App = () => {
 
   return (
     <div className="App">
-<<<<<<< HEAD
     
       <Navbar/>
       <div className="header">
         <Header text=" IMDB MOVIE APP" />
-=======
-      <div className="Nav">
-        <Navbar />
-        <Header text="IMDB MOVIE APP" />
->>>>>>> 993a9eb4757b637eb4337d221ac1459c674c7d83
         <Search search={search} />
    
       </div>
