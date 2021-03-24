@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useReducer, useEffect,useState } from 'react'
 import './styles/App.css'
 
@@ -12,6 +13,23 @@ import AddFav from './components/AddFav'
 import MovieListHeader from './components/MovieListHeader'
 import Navbar from './Navigation/Navbar'
 // =======
+=======
+import React, { useReducer, useEffect, useState } from 'react'
+import './styles/App.css'
+
+/* Components */
+import RemoveFav from './components/RemoveFav'
+import AddFav from './components/AddFav'
+import MovieListHeader from './components/MovieListHeader'
+import MovieList from './components/MovieList'
+
+/* Components */
+import Header from './components/Header'
+import Movie from './components/Movie'
+import Search from './components/Search'
+import Navbar from './Navigation/Navbar'
+import FooterPage from './Footer/footer'
+>>>>>>> main
 
 /* API */
 const API_KEY = 'd1ce076e'
@@ -37,7 +55,6 @@ const reducer = (state, action) => {
         ...state,
         loading: false,
         movies: action.payload,
-       
       }
     case 'SEARCH_MOVIES_FAILURE':
       return {
@@ -52,8 +69,8 @@ const reducer = (state, action) => {
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
-   const [favourites, setFavourites] = useState([])
-   console.log(favourites);
+  const [favourites, setFavourites] = useState([])
+  console.log(favourites)
 
   useEffect(() => {
     fetch(MOVIE_API_URL)
@@ -66,18 +83,28 @@ const App = () => {
       })
   }, [])
 
+  const saveToLocalStorage = (item) => {
+    localStorage.setItem('myLocalStorage', JSON.stringify(item))
+  }
+useEffect(() => {
+    const movieFavourites = JSON.parse(localStorage.getItem('myLocalStorage'))
+    setFavourites(movieFavourites)
+  }, [])
+  
+
   const addFavouriteMovie = (movie) => {
-    const NewFavouriteList = [...favourites, movie]
-    setFavourites(NewFavouriteList)
+    const newFavouriteList = [...favourites, movie]
+    setFavourites(newFavouriteList)
+    saveToLocalStorage(newFavouriteList)
   }
 
-
-    const removeFavouriteMovie = (movie) => {
+  const removeFavouriteMovie = (movie) => {
     const newFavouriteList = favourites.filter(
       (favourite) => favourite.imdbID !== movie.imdbID,
     )
 
     setFavourites(newFavouriteList)
+    saveToLocalStorage(newFavouriteList)
   }
   const search = (searchValue) => {
     dispatch({
@@ -102,18 +129,25 @@ const App = () => {
       })
   }
 
-
   const { movies, errorMessage, loading } = state
 
   return (
     <div className="App">
-      <div className="Nav">
+    
       <Navbar/>
+<<<<<<< HEAD
         <Header text="Search IMDB MOVIES with HOOK" />
       </div>  
       <div className="main_container">
         <Search search={search} />
     
+=======
+      <div className="header">
+        <Header text=" IMDB MOVIE APP" />
+        <Search search={search} />
+   
+      </div>
+>>>>>>> main
       <p className="App-intro"></p>
       <div className="movies">
         {loading && !errorMessage ? (
@@ -122,6 +156,7 @@ const App = () => {
           <div className="errorMessage">{errorMessage}</div>
         ) : (
           movies.map((movie, index) => (
+<<<<<<< HEAD
             <Movie key={`${index}-${movie.Title}`} movie={movie}
           />
           ))
@@ -140,13 +175,39 @@ const App = () => {
       </div>
       {/* Removing Favourites */}
       <MovieList
+=======
+            <Movie key={`${index}-${movie.Title}`} movie={movie} />
+          ))
+        )}
+        <div className="row d-flex align-items-center mt-4 mb-4"></div>
+        <div className="row">
+          {' '}
+          {/* Adding Favourites */}
+          <MovieList
+            movies={movies}
+            favouriteComponent={AddFav}
+            handleFavoriteClick={addFavouriteMovie}
+          />
+        </div>
+
+        {/* Adding Favourites */}
+        <div className="row d-flex align-items-center mt-4 mb-4">
+          <MovieListHeader heading="My Saved Movies" />
+        </div>
+        {/* Removing Favourites */}
+        <MovieList
+>>>>>>> main
           movies={favourites}
           handleFavoriteClick={removeFavouriteMovie}
           favouriteComponent={RemoveFav}
         />
       </div>
+<<<<<<< HEAD
       </div>
       <FooterPage/>
+=======
+      <FooterPage />
+>>>>>>> main
     </div>
   )
 }

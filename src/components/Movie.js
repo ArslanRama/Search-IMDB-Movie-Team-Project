@@ -8,17 +8,21 @@ const  Movie = ({movie}) => {
   return (
     <div className="movie">
       
-      <div>
+      {/* <div>
       <img
           width="200"
           alt={`The movie titled: ${movie.Title}`}
           src={poster}
         />
       </div>
+<<<<<<< HEAD
       <p>{movie.Title}</p>
       <p>{movie.Rating}</p>
       <p>{movie.Year}</p>
       <StarRating rating={5}/>
+=======
+      <p>{movie.Title}</p> */}
+>>>>>>> main
     </div>
   )
 }

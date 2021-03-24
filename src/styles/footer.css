@@ -1,0 +1,7 @@
+.logo i:hover {
+    color: whitesmoke;
+    transform: scale(1.6);
+    cursor: pointer;
+
+}
+
