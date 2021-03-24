@@ -69,11 +69,11 @@ const App = () => {
   const saveToLocalStorage = (item) => {
     localStorage.setItem('myLocalStorage', JSON.stringify(item))
   }
-
-  useEffect(() => {
+useEffect(() => {
     const movieFavourites = JSON.parse(localStorage.getItem('myLocalStorage'))
     setFavourites(movieFavourites)
   }, [])
+  
 
   const addFavouriteMovie = (movie) => {
     const newFavouriteList = [...favourites, movie]
