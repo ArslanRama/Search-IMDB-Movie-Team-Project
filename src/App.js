@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect,useState } from 'react'
+import React, { useReducer, useEffect, useState } from 'react'
 import './styles/App.css'
 
 /* Components */
@@ -39,7 +39,7 @@ const reducer = (state, action) => {
         ...state,
         loading: false,
         movies: action.payload,
-       
+
       }
     case 'SEARCH_MOVIES_FAILURE':
       return {
@@ -54,8 +54,8 @@ const reducer = (state, action) => {
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
-   const [favourites, setFavourites] = useState([])
-   console.log(favourites);
+  const [favourites, setFavourites] = useState([])
+  console.log(favourites);
 
   useEffect(() => {
     fetch(MOVIE_API_URL)
@@ -74,7 +74,7 @@ const App = () => {
   }
 
 
-    const removeFavouriteMovie = (movie) => {
+  const removeFavouriteMovie = (movie) => {
     const newFavouriteList = favourites.filter(
       (favourite) => favourite.imdbID !== movie.imdbID,
     )
@@ -110,7 +110,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="Nav">
-      <Navbar/>
+        <Navbar />
         <Header text="Search IMDB MOVIES with HOOK" />
         <Search search={search} />
       </div>
@@ -123,29 +123,34 @@ const App = () => {
         ) : (
           movies.map((movie, index) => (
             <Movie key={`${index}-${movie.Title}`} movie={movie}
-          />
+            />
           ))
         )}
         <div className="row d-flex align-items-center mt-4 mb-4">
-        <MovieListHeader heading="Favourites" />
-      </div>
-              <div className="row">
-        {' '}
+          <MovieListHeader heading="Favourites" />
+        </div>
+        <div className="row">
+          {' '}
+          {/* Adding Favourites */}
+          <MovieList
+            movies={movies}
+            favouriteComponent={AddFav}
+            handleFavoriteClick={addFavouriteMovie}
+          />
+        </div>
+
         {/* Adding Favourites */}
+        <div className="row d-flex align-items-center mt-4 mb-4">
+          <MovieListHeader heading="Favourites" />
+        </div>
+        {/* Removing Favourites */}
         <MovieList
-          movies={movies}
-          favouriteComponent={AddFav}
-          handleFavoriteClick={addFavouriteMovie}
-        />
-      </div>
-      {/* Removing Favourites */}
-      <MovieList
           movies={favourites}
           handleFavoriteClick={removeFavouriteMovie}
           favouriteComponent={RemoveFav}
         />
       </div>
-      <FooterPage/>
+      <FooterPage />
     </div>
   )
 }
