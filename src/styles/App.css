@@ -43,10 +43,6 @@
 .add-movies {
   text-align: center;
 }
-.add{
-  color: black;
-  
-}
 
 .add-movies button {
   font-size: 16px;
@@ -65,7 +61,6 @@
   color: rgb(161, 15, 15);
 }
 
-
 .search {
   display: flex;
   flex-direction: row;
@@ -73,7 +68,6 @@
   justify-content: center;
   margin-top: 10px;
 }
-
 
 input[type="submit"] {
   padding: 5px;
@@ -85,14 +79,12 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-
 input[type="submit"]:hover {
   background-color: #2e5094;
   color: antiquewhite;
 }
 
-
-.search > input[type="text"]{
+.search > input[type="text"] {
   width: 40%;
   min-width: 170px;
 }
@@ -109,10 +101,30 @@ input[type="submit"]:hover {
   }
 }
 
-
 @media screen and (max-width: 651px) {
   .movie {
     max-width: 100%;
     margin: auto;
   }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  height: 80px;
+  background-color: #ff8c00;
+  transition-duration: 4s;
+  transition-delay: 2s;
+}
+
+.link {
+  color: black;
+  font-size: 1.5rem;
+}
+.link:hover {
+  text-decoration: none;
+  color: blue;
+  font-size: 1.8rem;
 }
