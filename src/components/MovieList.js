@@ -5,12 +5,16 @@ const MoviesList = (movies) => {
   return (
     <>
       {movies.movies.map((movie, idx) => (
-        <div className="image-container d-flex justify-content-start m-3">
-          <img src={movie.Poster} alt="movies"></img>
-          <div onClick={() => movie.handleFavoriteClick(movie)}className="overlay d-flex align-items-center justify-content-center ">
-            <FavouriteComponent />
+        <div className="movie">
+          <img 
+          width="200"
+          src={movie.Poster} 
+          alt="movies"
+          />
+          <div onClick={() => movies.handleFavoriteClick(movie)}className="overlay d-flex align-items-center justify-content-center ">
+          <FavouriteComponent />
           </div>
-        </div>
+        </div> 
       ))}
     </>
   )

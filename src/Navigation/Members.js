@@ -2,13 +2,12 @@
 
 import React from 'react'
 
-function Members() {
- return (
-       <div>
-           
-           <h3>Members</h3>
-       </div>
- )
-}
+const Favourites=(props) =>{
+    return (
+        <div>
+         Favourites
+        </div>
+      )
+    }
 
-export default Members
+export default Favourites

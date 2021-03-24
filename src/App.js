@@ -1,4 +1,3 @@
-// <<<<<<< HEAD
 import React, { useReducer, useEffect,useState } from 'react'
 import './styles/App.css'
 
@@ -9,7 +8,7 @@ import MoviesList from './components/MovieList'
 import Search from './components/Search'
 import AddFavourites from './components/AddFav'
 import RemoveFav from './components/RemoveFav'
-// import AddFav from './components/AddFav'
+import AddFav from './components/AddFav'
 import MovieListHeader from './components/MovieListHeader'
 import Navbar from './Navigation/Navbar'
 // =======
@@ -127,31 +126,27 @@ const App = () => {
           />
           ))
         )}
-      <div className="row d-flex align-items-center mt-4 mb-4">
+        <div className="row d-flex align-items-center mt-4 mb-4">
         <MovieListHeader heading="Favourites" />
       </div>
               <div className="row">
         {' '}
-        <MoviesList
+        {/* Adding Favourites */}
+        <MovieList
           movies={movies}
-          favouriteComponent={AddFavourites}
+          favouriteComponent={AddFav}
           handleFavoriteClick={addFavouriteMovie}
         />
       </div>
-
-        <MoviesList
+      {/* Removing Favourites */}
+      <MovieList
           movies={favourites}
-          favouriteComponent={AddFavourites}
-          handleFavoriteClick={addFavouriteMovie}
-          // eslint-disable-next-line react/jsx-no-duplicate-props
-          movies={favourites}
-          // eslint-disable-next-line react/jsx-no-duplicate-props
           handleFavoriteClick={removeFavouriteMovie}
-          // eslint-disable-next-line react/jsx-no-duplicate-props
           favouriteComponent={RemoveFav}
         />
       </div>
       </div>
+      <FooterPage/>
     </div>
   )
 }

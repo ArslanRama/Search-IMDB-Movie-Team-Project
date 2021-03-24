@@ -1,6 +1,6 @@
 
 import React from 'react'
-import {BrowserRouter as Router, Route, Switch, NavLink, Redirect} from "react-router-dom"
+import {BrowserRouter as Router, Route, Switch, NavLink, Link, Redirect} from "react-router-dom"
 
 //* Child Components */
 import About from "./About"
@@ -14,14 +14,14 @@ function Navbar() {
  return (
        <Router>
 
-                 <div className="Nav">
-                     <ul>
-                                 <li><NavLink to="/">Home</NavLink></li> 
-                                 <li><NavLink to="/about">About</NavLink></li> 
-                                 <li><NavLink to ="/contacts">Contacts</NavLink></li> 
-                                 <li><NavLink to ="/members">Members</NavLink></li> 
-                                 <li><NavLink to ="/myAccount">MyAccount</NavLink></li> 
-                                        <Redirect to="/"></Redirect>
+                 <div>
+                     <ul className="navbar"  >
+                                 <li ><Link className= "link ml-4"  to ="/"><i class="fa fa-home"></i> Home</Link></li> 
+                                 <li><NavLink className= "link"  to="/about"><i class="fa fa-user"></i> About</NavLink></li> 
+                                 <li><NavLink className= "link" to ="/contacts"> <i class="fa fa-phone"></i> Contacts</NavLink></li> 
+                                 <li><NavLink className= "link"  to ="/members">  <i class="fa fa-users"></i> Members</NavLink></li> 
+                                 <li><NavLink className= "link mr-4"  to ="/myAccount"><i class="fa fa-clone"></i> MyAccount</NavLink></li> 
+                                   <Redirect to="/"></Redirect>
                        </ul>
                  </div>
                   

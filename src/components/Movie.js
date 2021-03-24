@@ -16,7 +16,8 @@ const  Movie = ({movie}) => {
         />
       </div>
       <p>{movie.Title}</p>
-      <p>{movie.rating}</p>
+      <p>{movie.Rating}</p>
+      <p>{movie.Year}</p>
       <StarRating rating={5}/>
     </div>
   )
