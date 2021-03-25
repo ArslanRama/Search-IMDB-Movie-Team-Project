@@ -12,10 +12,10 @@ const MoviesList = (movies) => {
           src={movie.Poster} 
           alt="movies"
           />
-          <div onClick={() => movies.handleFavoriteClick(movie)}className="overlay d-flex align-items-center justify-content-center ">
+          <div onClick={() => movies.handleFavoriteClick(movie)}className=" d-flex align-items-center justify-content-center ">
           
             <ul className="card_info">
-              <li><FavouriteComponent /></li>
+              <li className="overlay"><FavouriteComponent /></li>
               <li>{movie.Title}</li>
               <li>{movie.Year}</li>
               <li><StarRating rating={5}/></li>
