@@ -262,7 +262,7 @@ input[type="submit"]:hover {
     margin: auto;
   }
 }
-/* 
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -272,6 +272,7 @@ input[type="submit"]:hover {
   background-color: #ffb703;
   transition-duration: 4s;
   transition-delay: 2s;
+  z-index: 1000;
   
 }
 
@@ -283,4 +284,4 @@ input[type="submit"]:hover {
   text-decoration: none;
   color: blue;
   font-size: 1.8rem;
-} */
+}
