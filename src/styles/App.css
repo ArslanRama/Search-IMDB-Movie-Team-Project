@@ -30,7 +30,7 @@
 
 .App-header {
   background-color: black;
-  height: 70px;
+  height: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,10 +40,12 @@
   color: white;
   padding: 20px;
   cursor: pointer;
+  z-index: 100;
 }
 
 .header {
   padding-top: 2px;
+  /* z-index: 100; */
 }
 
 .spinner {
@@ -191,17 +193,17 @@ input[type="submit"]:hover {
 }
 
 .overlay {
-  background: rgba(12, 12, 12, 0.589); 
-  color: white;
+  background: rgba(12, 12, 12, 0.048); 
+  color: rgba(255, 255, 255, 0);
   position: absolute;
-  transition: 0, 5s ease;
+  /* transition: 0, 5s ease; */
   opacity: 1;
   top: 0;
   left: 0;
   width: 100%;
+  height: 8%;
   font-size: 16px;
   text-align: center;
-  z-index: 4;
   padding:5%;
 }
 .overlay:hover {
@@ -231,17 +233,17 @@ input[type="submit"]:hover {
   text-align: center;
   z-index: 4;
 } */
-.overlay:hover {
+/* .overlay:hover {
   color: rgb(223, 18, 18);
   max-height: 20%;
   transition: 1s;
   margin-top: 3%;
-}
+} */
 
 .favourites {
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 5;
 }
 
 @media screen and (min-width: 694px) and (max-width: 915px) {

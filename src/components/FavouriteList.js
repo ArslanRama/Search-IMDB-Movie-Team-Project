@@ -15,7 +15,7 @@ function FavouriteList(movies) {
             <div className=" d-flex align-items-center justify-content-center " onClick={() => movies.handleFavoriteClick(movie)}>
             
             <div className="card_info">
-              <h6 className="overlay"><FavouriteComponent /></h6>
+              <p className="overlay"><FavouriteComponent /></p>
               <h7>{movie.Title}</h7>
               <p>{movie.Year}</p>
               <p><StarRating rating={4.5}/></p>

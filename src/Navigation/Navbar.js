@@ -15,7 +15,7 @@ function Navbar() {
        <Router>
 
                  <div>
-                     <ul className="navbar"  >
+                     <ul className="navbar justify-content-between"  >
                                  <li ><Link className= "link ml-4"  to ="/"><i class="fa fa-home"></i> Home</Link></li> 
                                  <li><NavLink className= "link"  to="/movies"><i class="fa fa-film"></i> Movies</NavLink></li> 
                                  <li><NavLink className= "link" to ="/topRated"> <i class="fa fa-star"></i>TopRated</NavLink></li> 
