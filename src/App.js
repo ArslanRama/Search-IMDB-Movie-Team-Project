@@ -116,12 +116,12 @@ useEffect(() => {
   const { movies, errorMessage, loading } = state
 
   return (
-    <div className="App">
+     <div className="App">
     
       <Navbar/>
         <Header text="Search IMDB MOVIES with HOOK" />
     
-      <main className="main_container">
+      <div className="main_container">
         <Search search={search} />
     
       <p className="App-intro"></p>
@@ -137,7 +137,7 @@ useEffect(() => {
           ))
         )}
       
-              <div className="row">
+              <div className="row ml-1">
         {' '}
         {/* Adding Favourites */}
         <MovieList
@@ -145,20 +145,23 @@ useEffect(() => {
           favouriteComponent={AddFav}
           handleFavoriteClick={addFavouriteMovie}
         />
-          </div>  
-          <div className="row d-flex align-items-center mt-4 mb-4">
-            <MovieListHeader heading="Favourites" />
-          </div>
-          {/* Removing Favourites */}
-        
-          <FavouriteList
-              movies={favourites}
-              handleFavoriteClick={removeFavouriteMovie}
-              favouriteComponent={RemoveFav}
-            />
-          </div>
-          </main>
-          <FooterPage/>
+      </div>  
+      <div className="w-100 d-flex flex-column">
+      <div id="fav" className="d-flex justify-content-center text-light stylish-color-dark my-5 py-3">
+        <MovieListHeader  heading="Favourites" />
+      </div>
+      <div className="row ml-1">
+      {/* Removing Favourites */}
+      <FavouriteList
+          movies={favourites}
+          handleFavoriteClick={removeFavouriteMovie}
+          favouriteComponent={RemoveFav}
+        />
+      </div>
+      </div>
+      </div>
+      </div>
+      <FooterPage/>
     </div>
   )
 }
