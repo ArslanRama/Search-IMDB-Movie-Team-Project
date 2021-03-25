@@ -151,7 +151,7 @@ useEffect(() => {
           </div>
           {/* Removing Favourites */}
         
-          <MovieList
+          <FavouriteList
               movies={favourites}
               handleFavoriteClick={removeFavouriteMovie}
               favouriteComponent={RemoveFav}
