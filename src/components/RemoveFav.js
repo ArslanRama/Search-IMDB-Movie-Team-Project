@@ -4,7 +4,7 @@ import '../styles/Cursor.css'
 const RemoveFav = () => {
 	return (
 		<>
-			<span className='mr-2 '>Remove from favourites</span>
+			<span className='mr-2 fav'>Remove from favourites</span>
 			<svg
 				width='1em'
 				height='1em'
