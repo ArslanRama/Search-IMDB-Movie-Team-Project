@@ -178,7 +178,7 @@ input[type="submit"]:hover {
 }
 .overlay:hover {
   color: rgb(223, 18, 18);
-  max-height: 20%;
+  /* height: 20%; */
   transition: 1s;
   margin-top: 3%;
 }
