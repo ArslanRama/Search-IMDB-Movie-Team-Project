@@ -20,10 +20,7 @@ function FavouriteList(movies) {
               <p>{movie.Year}</p>
               <p><StarRating rating={4.5}/></p>
             </div> 
-              
-               
-              
-              
+   
             </div>
             
           </div> 

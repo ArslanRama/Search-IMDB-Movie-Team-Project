@@ -3,6 +3,8 @@ import StarRating from "./starRating"
 
 const MoviesList = (movies) => {
   const FavouriteComponent = movies.favouriteComponent
+
+
   return (
     <>
       {movies.movies.map((movie, idx) => (
