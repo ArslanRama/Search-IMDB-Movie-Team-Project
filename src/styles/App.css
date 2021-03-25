@@ -1,5 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+}
+
+/* Navbar Menu */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  height: 80px;
+  background-color: #ffb703;
+  transition-duration: 4s;
+  transition-delay: 2s;
+}
+
+.link {
+  color: black;
+  font-size: 1.5rem;
+}
+.link:hover {
+  text-decoration: none;
+  color: blue;
+  font-size: 1.8rem;
 }
 
 .App-header {
@@ -8,6 +34,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -17px;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -183,6 +210,35 @@ input[type="submit"]:hover {
   margin-top: 3%;
 }
 
+/* Image Container Overlay */
+
+.movie:hover .overlay {
+  opacity: 1;
+  background: rgb(20, 20, 20);
+}
+.overlay {
+  position: absolute;
+  background: rgba(238, 238, 238, 0.8);
+  color: white;
+  width: 200px;
+  transition: 0, 5s ease;
+  opacity: 0;
+  top: 0;
+  font-size: 16px;
+  /* padding: 20px; */
+  text-align: center;
+  justify-content: center;
+}
+.overlay:hover {
+  color: rgb(223, 18, 18);
+}
+
+.favourites {
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
 @media screen and (min-width: 694px) and (max-width: 915px) {
   .movie {
     max-width: 33%;
@@ -201,7 +257,7 @@ input[type="submit"]:hover {
     margin: auto;
   }
 }
-
+/* 
 .navbar {
   display: flex;
   flex-direction: row;
@@ -222,4 +278,4 @@ input[type="submit"]:hover {
   text-decoration: none;
   color: blue;
   font-size: 1.8rem;
-}
+} */

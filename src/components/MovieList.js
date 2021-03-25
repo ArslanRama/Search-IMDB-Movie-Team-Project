@@ -7,10 +7,10 @@ const MoviesList = (movies) => {
     <>
       {movies.movies.map((movie, idx) => (
         <div className="movie">
-          <img 
-          width="200"
-          src={movie.Poster} 
-          alt="movies"
+          <img
+            width="200"
+            src={movie.Poster}
+            alt="movies"
           />
           <div onClick={() => movies.handleFavoriteClick(movie)}className=" d-flex align-items-center justify-content-center ">
           
@@ -28,6 +28,7 @@ const MoviesList = (movies) => {
           
         </div> 
       ))}
+
     </>
   )
 }
